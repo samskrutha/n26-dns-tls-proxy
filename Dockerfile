@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 53535/udp
 
-CMD ["python", "n26_dns_tls_proxy.py"]
+CMD ["python", "dns_tls_proxy.py"]
