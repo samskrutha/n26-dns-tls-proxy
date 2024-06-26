@@ -1,4 +1,4 @@
-# n26-dns-tls-proxy
+# dns-tls-proxy
 
 ## Introduction
 
@@ -6,7 +6,7 @@ This project creates a proxy server that listens for regular DNS queries on port
 
 ## About
 
-The proxy is written in Python. It uses the `socket` module for network communication and `ssl` for encryption. The main script, `n26_dns_tls_proxy.py`, sets up a UDP server that listens for DNS queries and forwards them to Cloudflare's DNS-over-TLS server.
+The proxy is written in Python. It uses the `socket` module for network communication and `ssl` for encryption. The main script, `dns_tls_proxy.py`, sets up a UDP server that listens for DNS queries and forwards them to Cloudflare's DNS-over-TLS server.
 
 ## Security
 
@@ -36,18 +36,18 @@ The proxy is written in Python. It uses the `socket` module for network communic
 
 1. Navigate to the project directory:
    ```sh
-   cd n26_dns_tls_proxy
+   cd dns_tls_proxy
    ```
    2.Build the Docker image:
    ```sh
-   docker build -t n26-dns-tls-proxy .
+   docker build -t dns-tls-proxy .
    ```
 
 ### Running the Docker Container
 
 1. Run the Docker container:
    ```sh
-   docker run -p 53535:53535/udp n26-dns-tls-proxy
+   docker run -p 53535:53535/udp dns-tls-proxy
    ```
 
 ### Testing the Proxy
